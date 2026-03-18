@@ -22,6 +22,10 @@
   }
 }
 
+a, button {
+  cursor: pointer;
+}
+
 /* GSAP-inspired smooth transitions */
 .smooth-transition {
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);

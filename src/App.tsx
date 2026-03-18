@@ -61,12 +61,7 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled || !isHome ? 'bg-white shadow-sm py-4' : 'bg-transparent py-8'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 group cursor-pointer">
-          <div className="w-10 h-10 bg-royal-blue rounded-lg flex items-center justify-center">
-            <BarChart3 className="text-white w-6 h-6" />
-          </div>
-          <span className={`text-xl font-bold tracking-tight ${scrolled || !isHome ? 'text-royal-blue' : 'text-white'}`}>
-            A&J<span className="text-accent-blue">.</span>
-          </span>
+          <img src="src/content/logo.png" alt="A&J Assessoria Contábil" className="w-30 h-10" />
         </Link>
 
         {/* Desktop Menu */}
@@ -83,11 +78,14 @@ const Navbar = () => {
           )) : (
             <Link to="/" className="font-semibold text-xs uppercase tracking-widest text-deep-black hover:text-accent-blue">Voltar ao Início</Link>
           )}
-          <button 
-            className="bg-royal-blue text-white px-6 py-2 rounded-md font-bold text-xs uppercase tracking-widest hover:bg-blue-800 transition-all"
+          <a 
+            href="https://api.whatsapp.com/send/?phone=5511949593268&text=Ol%C3%A1%2C+vim+pelo+site+e+quero+mais+informa%C3%A7%C3%B5es&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-royal-blue text-white px-6 py-2 rounded-md font-bold text-xs uppercase tracking-widest hover:bg-blue-800 transition-all inline-block"
           >
             Fale Conosco
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -117,11 +115,14 @@ const Navbar = () => {
               )) : (
                 <Link to="/" className="text-xl font-bold text-deep-black">Início</Link>
               )}
-              <button 
-                className="bg-royal-blue text-white px-6 py-3 rounded-md font-bold text-center text-sm uppercase tracking-widest"
+              <a 
+            href="https://api.whatsapp.com/send/?phone=5511949593268&text=Ol%C3%A1%2C+vim+pelo+site+e+quero+mais+informa%C3%A7%C3%B5es&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-royal-blue text-white px-6 py-2 rounded-md font-bold text-xs uppercase tracking-widest hover:bg-blue-800 transition-all inline-block"
               >
                 Fale Conosco
-              </button>
+              </a>
             </div>
           </motion.div>
         )}
@@ -136,9 +137,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-12">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-royal-blue rounded-lg flex items-center justify-center">
-              <BarChart3 className="text-white w-6 h-6" />
-            </div>
+            <img src="src/content/logo.png" alt="A&J Assessoria Contábil" className="w-24 h-auto brightness-0 invert"/>
             <span className="text-2xl font-bold tracking-tight">
               A&J Assessoria Contábil<span className="text-accent-blue">.</span>
             </span>
@@ -251,9 +250,12 @@ const LandingPage = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button onClick={() => document.querySelector('#servicos')?.scrollIntoView({ behavior: 'smooth' })} className="group bg-royal-blue text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-blue-800 transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20">
-                Nossos Serviços <ArrowUpRight className="w-5 h-5" />
-              </button>
+             <button 
+              onClick={() => window.open("https://api.whatsapp.com/send/?phone=5511949593268&text=Ol%C3%A1%2C+vim+pelo+site+e+quero+mais+informa%C3%A7%C3%B5es&type=phone_number&app_absent=0", "_blank")}
+              className="group bg-royal-blue text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-blue-800 transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20"
+            >
+              Fale Conosco <ArrowUpRight className="w-5 h-5" />
+            </button>
               <button onClick={() => document.querySelector('#sobre')?.scrollIntoView({ behavior: 'smooth' })} className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-lg font-bold text-base hover:bg-white/20 transition-all text-center">
                 Sobre a A&J Assessoria Contábil
               </button>
@@ -475,24 +477,49 @@ const PrivacyPolicy = () => {
       <div className="max-w-4xl mx-auto px-6">
         <h1 className="text-4xl font-bold mb-8 text-royal-blue">Política de Privacidade (LGPD)</h1>
         <div className="prose prose-slate max-w-none text-gray-600 space-y-6">
-          <p>A A&J Assessoria Contábil Contabilidade está comprometida com a proteção de seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD).</p>
-          
-          <h2 className="text-xl font-bold text-deep-black pt-4">1. Coleta de Dados</h2>
-          <p>Coletamos apenas os dados necessários para a prestação de nossos serviços contábeis e para o contato comercial, como nome, e-mail e dados da empresa.</p>
-          
-          <h2 className="text-xl font-bold text-deep-black pt-4">2. Finalidade do Tratamento</h2>
-          <p>Seus dados são utilizados exclusivamente para:</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Execução de contratos de prestação de serviços contábeis;</li>
-            <li>Cumprimento de obrigações legais e fiscais;</li>
-            <li>Comunicação sobre atualizações legislativas e serviços.</li>
-          </ul>
+          <p>
+            A A&J Assessoria Contábil, inscrita no CNPJ sob nº 41.952.549/0001-63, respeita a sua privacidade e está comprometida com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 – LGPD).
+          </p>
 
-          <h2 className="text-xl font-bold text-deep-black pt-4">3. Seus Direitos</h2>
-          <p>Como titular dos dados, você tem direito a confirmar a existência de tratamento, acessar seus dados, corrigir dados incompletos ou desatualizados e solicitar a anonimização ou eliminação de dados desnecessários.</p>
-          
-          <h2 className="text-xl font-bold text-deep-black pt-4">4. Segurança</h2>
-          <p>Implementamos medidas técnicas e administrativas para proteger seus dados contra acessos não autorizados e situações acidentais ou ilícitas de destruição, perda ou alteração.</p>
+          <h2 className="text-xl font-bold text-deep-black pt-4">1. Coleta de Dados</h2>
+          <p>
+            Podemos coletar dados como nome, e-mail, telefone e informações fornecidas em formulários, além de dados de navegação como IP, cookies e tipo de dispositivo.
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">2. Uso dos Dados</h2>
+          <p>
+            Utilizamos os dados para contato, prestação de serviços, envio de comunicações, melhoria da experiência no site e cumprimento de obrigações legais.
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">3. Compartilhamento de Dados</h2>
+          <p>
+            Seus dados não são vendidos. Podemos compartilhar apenas com parceiros tecnológicos, ferramentas de comunicação ou quando exigido por lei.
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">4. Armazenamento e Segurança</h2>
+          <p>
+            Adotamos medidas de segurança para proteger seus dados contra acessos não autorizados, vazamentos ou alterações indevidas.
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">5. Cookies</h2>
+          <p>
+            Utilizamos cookies para melhorar o funcionamento do site e personalizar sua experiência. Você pode desativá-los nas configurações do navegador.
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">6. Direitos do Titular</h2>
+          <p>
+            Você pode acessar, corrigir ou solicitar a exclusão dos seus dados, além de revogar consentimentos, conforme previsto na LGPD.
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">7. Contato</h2>
+          <p>
+            Para exercer seus direitos ou tirar dúvidas, entre em contato pelo e-mail: contato@aejcont.com.br
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">8. Atualizações</h2>
+          <p>
+            Esta política pode ser atualizada a qualquer momento. Recomendamos sua revisão periódica.
+          </p>
         </div>
       </div>
     </main>
@@ -505,19 +532,44 @@ const TermsOfUse = () => {
       <div className="max-w-4xl mx-auto px-6">
         <h1 className="text-4xl font-bold mb-8 text-royal-blue">Termos de Uso</h1>
         <div className="prose prose-slate max-w-none text-gray-600 space-y-6">
-          <p>Ao acessar o site da A&J Assessoria Contábil, você concorda em cumprir estes termos de serviço e todas as leis e regulamentos aplicáveis.</p>
-          
-          <h2 className="text-xl font-bold text-deep-black pt-4">1. Uso de Licença</h2>
-          <p>É concedida permissão para baixar temporariamente uma cópia dos materiais no site da A&J Assessoria Contábil apenas para visualização transitória pessoal e não comercial.</p>
-          
-          <h2 className="text-xl font-bold text-deep-black pt-4">2. Isenção de Responsabilidade</h2>
-          <p>Os materiais no site da A&J Assessoria Contábil são fornecidos 'como estão'. A A&J não oferece garantias, expressas ou implícitas, e por este meio isenta e nega todas as outras garantias.</p>
+          <p>
+            Ao acessar o site da A&J Assessoria Contábil, você concorda com estes Termos de Uso e com todas as leis e regulamentos aplicáveis.
+          </p>
 
-          <h2 className="text-xl font-bold text-deep-black pt-4">3. Limitações</h2>
-          <p>Em nenhum caso a A&J Assessoria Contábil ou seus fornecedores serão responsáveis por quaisquer danos decorrentes do uso ou da incapacidade de usar os materiais no site.</p>
-          
-          <h2 className="text-xl font-bold text-deep-black pt-4">4. Lei Aplicável</h2>
-          <p>Estes termos e condições são regidos e interpretados de acordo com as leis do Brasil e você se submete irrevogavelmente à jurisdição exclusiva dos tribunais naquele estado ou localidade.</p>
+          <h2 className="text-xl font-bold text-deep-black pt-4">1. Uso do Site</h2>
+          <p>
+            O uso deste site é permitido apenas para fins legais. Você concorda em não utilizar este site para atividades que violem leis ou direitos de terceiros.
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">2. Propriedade Intelectual</h2>
+          <p>
+            Todo o conteúdo deste site, incluindo textos, imagens, logotipos e materiais, é de propriedade da A&J Assessoria Contábil e não pode ser reproduzido sem autorização prévia.
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">3. Isenção de Responsabilidade</h2>
+          <p>
+            As informações disponíveis neste site são fornecidas "como estão", sem garantias de qualquer tipo. Não garantimos que o conteúdo esteja sempre atualizado ou livre de erros.
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">4. Limitação de Responsabilidade</h2>
+          <p>
+            A A&J Assessoria Contábil não será responsável por quaisquer danos diretos ou indiretos decorrentes do uso ou da incapacidade de uso deste site.
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">5. Links Externos</h2>
+          <p>
+            Este site pode conter links para sites de terceiros. Não nos responsabilizamos pelo conteúdo ou práticas desses sites.
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">6. Modificações</h2>
+          <p>
+            Podemos revisar estes termos a qualquer momento, sem aviso prévio. Ao continuar utilizando o site, você concorda com as alterações.
+          </p>
+
+          <h2 className="text-xl font-bold text-deep-black pt-4">7. Legislação Aplicável</h2>
+          <p>
+            Estes termos são regidos pelas leis brasileiras.
+          </p>
         </div>
       </div>
     </main>
