@@ -61,7 +61,7 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled || !isHome ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6 md:py-8'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center gap-4">
         <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 group cursor-pointer">
-          <img src="src/content/logo.png" alt="A&J Assessoria Contábil" className="h-9 w-auto sm:h-10" />
+          <img src="public/logo.png" alt="A&J Assessoria Contábil" className="h-9 w-auto sm:h-10" />
         </Link>
 
         {/* Desktop Menu */}
@@ -137,7 +137,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col items-center text-center mb-12 md:mb-16 gap-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <img src="src/content/logo.png" alt="A&J Assessoria Contábil" className="w-24 h-auto brightness-0 invert"/>
+            <img src="public/logo.png" alt="A&J Assessoria Contábil" className="w-24 h-auto brightness-0 invert"/>
             <span className="text-xl sm:text-2xl font-bold tracking-tight">
               A&J Assessoria Contábil<span className="text-accent-blue">.</span>
             </span>
@@ -151,6 +151,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 gap-8 pt-10 md:pt-12 border-t border-white/5 text-gray-500 text-sm text-center md:text-left items-center">
           <div className="space-y-2">
             <p>© {new Date().getFullYear()} A&J Assessoria Contábil</p>
+            <p>CNPJ: 41.952.549/0001-63 <br></br>Registro: CRC 2SP052365/O-0</p>
             <p>
               Desenvolvido por{' '}
               <a
@@ -164,8 +165,8 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
-            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-white transition-colors">Instagram</a>
+            <a href="https://api.whatsapp.com/send/?phone=5511949593268&text=Ol%C3%A1%2C+vim+pelo+site+e+quero+mais+informa%C3%A7%C3%B5es&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Contato</a>
+            <a href="https://www.instagram.com/aejcont" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
           </div>
         </div>
       </div>
