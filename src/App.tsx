@@ -58,10 +58,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled || !isHome ? 'bg-white shadow-sm py-4' : 'bg-transparent py-8'}`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled || !isHome ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6 md:py-8'}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center gap-4">
         <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 group cursor-pointer">
-          <img src="src/content/logo.png" alt="A&J Assessoria Contábil" className="w-30 h-10" />
+          <img src="src/content/logo.png" alt="A&J Assessoria Contábil" className="h-9 w-auto sm:h-10" />
         </Link>
 
         {/* Desktop Menu */}
@@ -89,7 +89,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button className="md:hidden shrink-0" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X className={scrolled || !isHome ? 'text-deep-black' : 'text-white'} /> : <Menu className={scrolled || !isHome ? 'text-deep-black' : 'text-white'} />}
         </button>
       </div>
@@ -103,7 +103,7 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -20 }}
             className="md:hidden absolute top-full left-0 w-full bg-white shadow-2xl overflow-hidden"
           >
-            <div className="flex flex-col p-8 gap-6">
+            <div className="flex flex-col p-6 gap-5">
               {isHome ? navLinks.map((link) => (
                 <button 
                   key={link.name} 
@@ -133,22 +133,22 @@ const Navbar = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-deep-black text-white py-20 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-12">
-          <div className="flex items-center gap-3">
+    <footer className="bg-deep-black text-white py-16 md:py-20 border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex flex-col items-center text-center mb-12 md:mb-16 gap-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <img src="src/content/logo.png" alt="A&J Assessoria Contábil" className="w-24 h-auto brightness-0 invert"/>
-            <span className="text-2xl font-bold tracking-tight">
+            <span className="text-xl sm:text-2xl font-bold tracking-tight">
               A&J Assessoria Contábil<span className="text-accent-blue">.</span>
             </span>
           </div>
-          <div className="flex flex-wrap gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
             <Link to="/privacidade" className="hover:text-white transition-colors">Privacidade</Link>
             <Link to="/termos" className="hover:text-white transition-colors">Termos de Uso</Link>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 pt-12 border-t border-white/5 text-gray-500 text-sm">
+        <div className="grid md:grid-cols-2 gap-8 pt-10 md:pt-12 border-t border-white/5 text-gray-500 text-sm text-center md:text-left items-center">
           <div className="space-y-2">
             <p>© {new Date().getFullYear()} A&J Assessoria Contábil</p>
             <p>
@@ -163,7 +163,7 @@ const Footer = () => {
               </a>
             </p>
           </div>
-          <div className="flex md:justify-end gap-8">
+          <div className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
             <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
             <a href="#" className="hover:text-white transition-colors">Instagram</a>
           </div>
@@ -201,7 +201,7 @@ const LandingPage = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section id="inicio" className="relative h-screen flex items-center overflow-hidden bg-deep-black">
+      <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-deep-black">
         <motion.div style={{ y: y1, opacity }} className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" 
@@ -212,7 +212,7 @@ const LandingPage = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-deep-black"></div>
         </motion.div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pt-28 pb-12 sm:pt-32 sm:pb-16">
           <div className="max-w-4xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -228,7 +228,7 @@ const LandingPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6 tracking-tight"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6 tracking-tight"
             >
               Inteligência contábil <br />
               para o seu <span className="text-accent-blue">negócio.</span>
@@ -238,7 +238,7 @@ const LandingPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-xl font-normal"
+              className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 md:mb-10 leading-relaxed max-w-xl font-normal"
             >
               Soluções corporativas modernas para empresas que buscam segurança, 
               eficiência e crescimento sustentável no ambiente digital.
@@ -248,7 +248,7 @@ const LandingPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 sm:items-center"
             >
              <button 
               onClick={() => window.open("https://api.whatsapp.com/send/?phone=5511949593268&text=Ol%C3%A1%2C+vim+pelo+site+e+quero+mais+informa%C3%A7%C3%B5es&type=phone_number&app_absent=0", "_blank")}
@@ -265,9 +265,9 @@ const LandingPage = () => {
       </section>
 
       {/* Pillars Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-12">
+      <section className="py-20 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid md:grid-cols-3 gap-10 md:gap-12">
             {[
               { title: "Tecnologia", desc: "Processos 100% digitais e integrados para maior agilidade.", icon: TrendingUp },
               { title: "Estratégia", desc: "Foco real no aumento da sua lucratividade e redução de custos.", icon: BarChart3 },
@@ -286,9 +286,9 @@ const LandingPage = () => {
       </section>
 
       {/* Numbers Section */}
-      <section className="py-24 bg-soft-white border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+      <section className="py-20 md:py-24 bg-soft-white border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
             {[
               { val: "15+", label: "Anos de Mercado" },
               { val: "500+", label: "Clientes Ativos" },
@@ -305,9 +305,9 @@ const LandingPage = () => {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-32 bg-white overflow-hidden" ref={aboutRef}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
+      <section id="sobre" className="py-24 md:py-32 bg-white overflow-hidden" ref={aboutRef}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
             <div className="relative">
               <motion.div 
                 initial={{ scale: 0.9, opacity: 0 }}
@@ -322,7 +322,7 @@ const LandingPage = () => {
                   referrerPolicy="no-referrer"
                 />
               </motion.div>
-              <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-royal-blue/20 rounded-2xl -z-0"></div>
+              <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-full h-full border-2 border-royal-blue/20 rounded-2xl -z-0"></div>
             </div>
 
             <div className="space-y-8">
@@ -337,7 +337,7 @@ const LandingPage = () => {
                 A  A&J Assessoria Contábil nasceu para oferecer um serviço contábil que fosse além do cumprimento de obrigações fiscais. 
                 Acreditamos que a contabilidade deve ser o braço direito do empreendedor.
               </p>
-              <div className="grid grid-cols-2 gap-6 pt-4">
+              <div className="grid sm:grid-cols-2 gap-6 pt-4">
                 <div className="space-y-2">
                   <h4 className="font-bold text-royal-blue">Missão</h4>
                   <p className="text-sm text-gray-500">Transformar dados em inteligência estratégica.</p>
@@ -353,9 +353,9 @@ const LandingPage = () => {
       </section>
 
       {/* Methodology Section */}
-      <section className="py-24 bg-soft-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-royal-blue text-white p-12 md:p-20 rounded-3xl overflow-hidden relative">
+      <section className="py-20 md:py-24 bg-soft-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="bg-royal-blue text-white p-8 sm:p-10 md:p-20 rounded-3xl overflow-hidden relative">
             <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 -skew-x-12 translate-x-1/4"></div>
             <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -371,7 +371,7 @@ const LandingPage = () => {
                   <span className="bg-white/10 px-4 py-2 rounded-full text-xs font-bold border border-white/10">Cloud Based</span>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <div className="bg-white/10 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
                   <div className="text-2xl font-bold mb-2">Agilidade</div>
                   <div className="text-sm text-blue-100/60">Respostas em até 4h úteis.</div>
@@ -387,8 +387,8 @@ const LandingPage = () => {
       </section>
 
       {/* Services Section */}
-      <section id="servicos" className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+      <section id="servicos" className="py-24 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-xl mb-16">
             <h2 className="text-royal-blue text-xs font-bold uppercase tracking-[0.2em] mb-4">Serviços</h2>
             <h3 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
@@ -421,9 +421,9 @@ const LandingPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="depoimentos" className="py-32 bg-soft-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
+      <section id="depoimentos" className="py-24 md:py-32 bg-soft-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16 md:mb-20">
             <h2 className="text-royal-blue text-xs font-bold uppercase tracking-[0.2em] mb-4">Depoimentos</h2>
             <h3 className="text-3xl md:text-5xl font-bold tracking-tight">O que nossos <span className="text-royal-blue">clientes</span> dizem.</h3>
           </div>
@@ -443,8 +443,8 @@ const LandingPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-royal-blue text-xs font-bold uppercase tracking-[0.2em] mb-4">FAQ</h2>
@@ -473,8 +473,8 @@ const LandingPage = () => {
 
 const PrivacyPolicy = () => {
   return (
-    <main className="pt-32 pb-24 bg-white min-h-screen">
-      <div className="max-w-4xl mx-auto px-6">
+    <main className="pt-28 md:pt-32 pb-20 md:pb-24 bg-white min-h-screen">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <h1 className="text-4xl font-bold mb-8 text-royal-blue">Política de Privacidade (LGPD)</h1>
         <div className="prose prose-slate max-w-none text-gray-600 space-y-6">
           <p>
