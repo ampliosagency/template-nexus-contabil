@@ -2,19 +2,32 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Template contábil Nexus
 
-This contains everything you need to run your app locally.
+Este projeto é um template de site institucional para escritórios de contabilidade e consultorias financeiras.
 
-View your app in AI Studio: https://ai.studio/apps/b334d19b-fb64-45bf-90e5-dab5dea2d9cf
+## O que está incluído
 
-## Run Locally
+- Landing page com foco em apresentação de serviços contábeis.
+- Seções de hero, diferenciais, serviços, depoimentos, FAQ e páginas legais.
+- Estilo visual corporativo, pronto para personalização de marca, textos e contatos.
 
-**Prerequisites:**  Node.js
+## Como rodar localmente
 
+**Pré-requisitos:** Node.js
 
-1. Install dependencies:
+1. Instale as dependências:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Inicie o ambiente de desenvolvimento:
    `npm run dev`
+3. Gere a versão de produção quando necessário:
+   `npm run build`
+
+## Personalização
+
+Você pode adaptar facilmente este template para:
+
+- trocar nome, logo e identidade visual;
+- ajustar textos institucionais e serviços;
+- configurar links de contato, redes sociais e rodapé;
+- publicar como site institucional de um escritório contábil.

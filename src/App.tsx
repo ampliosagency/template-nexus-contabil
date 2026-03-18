@@ -150,7 +150,20 @@ const Footer = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 pt-12 border-t border-white/5 text-gray-500 text-sm">
-          <p>© {new Date().getFullYear()} Nexus Contabilidade. Em conformidade com a LGPD.</p>
+          <div className="space-y-2">
+            <p>© {new Date().getFullYear()} Nexus Contabilidade. Em conformidade com a LGPD.</p>
+            <p>
+              Desenvolvido por{' '}
+              <a
+                href="https://agenciaamplios.com.br"
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold text-white hover:text-accent-blue transition-colors"
+              >
+                Agência Amplios
+              </a>
+            </p>
+          </div>
           <div className="flex md:justify-end gap-8">
             <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
             <a href="#" className="hover:text-white transition-colors">Instagram</a>
