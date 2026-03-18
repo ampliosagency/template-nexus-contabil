@@ -61,7 +61,7 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled || !isHome ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6 md:py-8'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center gap-4">
         <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 group cursor-pointer">
-          <img src="public/logo.png" alt="A&J Assessoria Contábil" className="h-9 w-auto sm:h-10" />
+          <img src="/logo.png" alt="A&J Assessoria Contábil" className="h-9 w-auto sm:h-10" />
         </Link>
 
         {/* Desktop Menu */}
@@ -137,7 +137,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col items-center text-center mb-12 md:mb-16 gap-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <img src="public/logo.png" alt="A&J Assessoria Contábil" className="w-24 h-auto brightness-0 invert"/>
+            <img src="/logo.png" alt="A&J Assessoria Contábil" className="w-24 h-auto brightness-0 invert"/>
             <span className="text-xl sm:text-2xl font-bold tracking-tight">
               A&J Assessoria Contábil<span className="text-accent-blue">.</span>
             </span>
