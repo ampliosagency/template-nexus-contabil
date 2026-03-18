@@ -39,7 +39,7 @@ const Navbar = () => {
   const isHome = location.pathname === '/';
 
   const navLinks = [
-    { name: 'Início', href: '#inicio' },
+    { name: 'Início', href: '#inicio'},
     { name: 'Sobre', href: '#sobre' },
     { name: 'Serviços', href: '#servicos' },
     { name: 'Depoimentos', href: '#depoimentos' },
@@ -65,7 +65,7 @@ const Navbar = () => {
             <BarChart3 className="text-white w-6 h-6" />
           </div>
           <span className={`text-xl font-bold tracking-tight ${scrolled || !isHome ? 'text-royal-blue' : 'text-white'}`}>
-            NEXUS<span className="text-accent-blue">.</span>
+            A&J<span className="text-accent-blue">.</span>
           </span>
         </Link>
 
@@ -140,7 +140,7 @@ const Footer = () => {
               <BarChart3 className="text-white w-6 h-6" />
             </div>
             <span className="text-2xl font-bold tracking-tight">
-              NEXUS<span className="text-accent-blue">.</span>
+              A&J Assessoria Contábil<span className="text-accent-blue">.</span>
             </span>
           </div>
           <div className="flex flex-wrap gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
@@ -151,7 +151,7 @@ const Footer = () => {
 
         <div className="grid md:grid-cols-2 gap-12 pt-12 border-t border-white/5 text-gray-500 text-sm">
           <div className="space-y-2">
-            <p>© {new Date().getFullYear()} Nexus Contabilidade. Em conformidade com a LGPD.</p>
+            <p>© {new Date().getFullYear()} A&J Assessoria Contábil</p>
             <p>
               Desenvolvido por{' '}
               <a
@@ -194,9 +194,9 @@ const LandingPage = () => {
   ];
 
   const testimonials = [
-    { name: "Roberto Silva", company: "TechFlow Solutions", text: "A Nexus transformou nossa contabilidade. A agilidade digital deles é incomparável." },
+    { name: "Roberto Silva", company: "TechFlow Solutions", text: "A A&J Assessoria Contábil transformou nossa contabilidade. A agilidade digital deles é incomparável." },
     { name: "Mariana Costa", company: "Studio M", text: "Finalmente uma contabilidade que fala a língua do empreendedor moderno. Recomendo muito!" },
-    { name: "Carlos Eduardo", company: "Logística Express", text: "O planejamento tributário da Nexus nos economizou 20% em impostos no primeiro ano." }
+    { name: "Carlos Eduardo", company: "Logística Express", text: "O planejamento tributário da A&J Assessoria Contábil nos economizou 20% em impostos no primeiro ano." }
   ];
 
   return (
@@ -255,7 +255,7 @@ const LandingPage = () => {
                 Nossos Serviços <ArrowUpRight className="w-5 h-5" />
               </button>
               <button onClick={() => document.querySelector('#sobre')?.scrollIntoView({ behavior: 'smooth' })} className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-lg font-bold text-base hover:bg-white/20 transition-all text-center">
-                Sobre a Nexus
+                Sobre a A&J Assessoria Contábil
               </button>
             </motion.div>
           </div>
@@ -332,7 +332,7 @@ const LandingPage = () => {
                 <span className="text-royal-blue font-extrabold">Excelência.</span>
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                A Nexus Contabilidade nasceu para oferecer um serviço contábil que fosse além do cumprimento de obrigações fiscais. 
+                A  A&J Assessoria Contábil nasceu para oferecer um serviço contábil que fosse além do cumprimento de obrigações fiscais. 
                 Acreditamos que a contabilidade deve ser o braço direito do empreendedor.
               </p>
               <div className="grid grid-cols-2 gap-6 pt-4">
@@ -450,7 +450,7 @@ const LandingPage = () => {
             </div>
             <div className="space-y-6">
               {[
-                { q: "Como funciona a migração para a Nexus?", a: "É simples. Nós cuidamos de todo o processo de transição com seu contador atual, sem interrupções no seu negócio." },
+                { q: "Como funciona a migração para a A&J Assessoria Contábil?", a: "É simples. Nós cuidamos de todo o processo de transição com seu contador atual, sem interrupções no seu negócio." },
                 { q: "Quais sistemas vocês utilizam?", a: "Trabalhamos com as principais plataformas ERP do mercado e possuímos integração direta via API para automação total." },
                 { q: "Atendem empresas de quais regimes tributários?", a: "Atendemos Simples Nacional, Lucro Presumido e Lucro Real, com especialistas dedicados para cada regime." }
               ].map((faq, idx) => (
@@ -475,7 +475,7 @@ const PrivacyPolicy = () => {
       <div className="max-w-4xl mx-auto px-6">
         <h1 className="text-4xl font-bold mb-8 text-royal-blue">Política de Privacidade (LGPD)</h1>
         <div className="prose prose-slate max-w-none text-gray-600 space-y-6">
-          <p>A Nexus Contabilidade está comprometida com a proteção de seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD).</p>
+          <p>A A&J Assessoria Contábil Contabilidade está comprometida com a proteção de seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD).</p>
           
           <h2 className="text-xl font-bold text-deep-black pt-4">1. Coleta de Dados</h2>
           <p>Coletamos apenas os dados necessários para a prestação de nossos serviços contábeis e para o contato comercial, como nome, e-mail e dados da empresa.</p>
@@ -505,16 +505,16 @@ const TermsOfUse = () => {
       <div className="max-w-4xl mx-auto px-6">
         <h1 className="text-4xl font-bold mb-8 text-royal-blue">Termos de Uso</h1>
         <div className="prose prose-slate max-w-none text-gray-600 space-y-6">
-          <p>Ao acessar o site da Nexus Contabilidade, você concorda em cumprir estes termos de serviço e todas as leis e regulamentos aplicáveis.</p>
+          <p>Ao acessar o site da A&J Assessoria Contábil, você concorda em cumprir estes termos de serviço e todas as leis e regulamentos aplicáveis.</p>
           
           <h2 className="text-xl font-bold text-deep-black pt-4">1. Uso de Licença</h2>
-          <p>É concedida permissão para baixar temporariamente uma cópia dos materiais no site da Nexus Contabilidade apenas para visualização transitória pessoal e não comercial.</p>
+          <p>É concedida permissão para baixar temporariamente uma cópia dos materiais no site da A&J Assessoria Contábil apenas para visualização transitória pessoal e não comercial.</p>
           
           <h2 className="text-xl font-bold text-deep-black pt-4">2. Isenção de Responsabilidade</h2>
-          <p>Os materiais no site da Nexus Contabilidade são fornecidos 'como estão'. A Nexus não oferece garantias, expressas ou implícitas, e por este meio isenta e nega todas as outras garantias.</p>
+          <p>Os materiais no site da A&J Assessoria Contábil são fornecidos 'como estão'. A A&J não oferece garantias, expressas ou implícitas, e por este meio isenta e nega todas as outras garantias.</p>
 
           <h2 className="text-xl font-bold text-deep-black pt-4">3. Limitações</h2>
-          <p>Em nenhum caso a Nexus Contabilidade ou seus fornecedores serão responsáveis por quaisquer danos decorrentes do uso ou da incapacidade de usar os materiais no site.</p>
+          <p>Em nenhum caso a A&J Assessoria Contábil ou seus fornecedores serão responsáveis por quaisquer danos decorrentes do uso ou da incapacidade de usar os materiais no site.</p>
           
           <h2 className="text-xl font-bold text-deep-black pt-4">4. Lei Aplicável</h2>
           <p>Estes termos e condições são regidos e interpretados de acordo com as leis do Brasil e você se submete irrevogavelmente à jurisdição exclusiva dos tribunais naquele estado ou localidade.</p>
